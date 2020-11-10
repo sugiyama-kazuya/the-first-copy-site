@@ -19,8 +19,13 @@
     <!-- header -->
     <header class="header">
       <div class="header__inner">
-        <p class="header__logo">DIGSMILE</p>
-        <button type="button" class="burger-btn">
+        <p id="js-header-logo" class="header__logo">DIGSMILE</p>
+        <button
+          id="js-burger-btn"
+          type="button"
+          class="burger-btn"
+          onclick="headerModule.toggleBurgerBtn()"
+        >
           <div class="burger-btn__inner">
             <span class="burger-btn__bar-top"></span>
             <span class="burger-btn__bar-mid"></span>
@@ -29,24 +34,24 @@
           <p class="burger-btn__title">MENU</p>
         </button>
       </div>
+
+      <!-- nav-menu -->
+      <nav id="js-nav-menu" class="nav-menu">
+        <div class="nav-menu__inner">
+          <ul class="nav-menu__list">
+            <li><a href="">HOME</a></li>
+            <li><a href="">ABOUT US</a></li>
+            <li><a href="">WORKS</a></li>
+            <li><a href="">CULTURE</a></li>
+            <li><a href="">TOPICS</a></li>
+            <li><a href="">CONTACT</a></li>
+          </ul>
+        </div>
+        <div class="nav-menu__mask"></div>
+      </nav>
+      <!-- //nav-menu -->
     </header>
     <!-- // header -->
-
-    <!-- nav-menu -->
-    <nav class="nav-menu">
-      <div class="nav-menu__inner">
-        <ul class="nav-menu__list">
-          <li><a href="">HOME</a></li>
-          <li><a href="">ABOUT US</a></li>
-          <li><a href="">WORKS</a></li>
-          <li><a href="">CULTURE</a></li>
-          <li><a href="">TOPICS</a></li>
-          <li><a href="">CONTACT</a></li>
-        </ul>
-      </div>
-      <div class="nav-menu__mask"></div>
-    </nav>
-    <!-- //nav-menu -->
 
     <!-- fv -->
     <div class="fv">
@@ -185,5 +190,7 @@
       </div>
     </footer>
     <!-- //footer -->
+
+    <script src="./js/app.js"></script>
   </body>
 </html>
