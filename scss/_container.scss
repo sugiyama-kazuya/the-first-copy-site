@@ -27,9 +27,18 @@
     }
   }
 
+  &__works-culture {
+    padding: 8rem 0 6rem;
+  }
+
   &__latest-topics {
     @extend %container;
     display: flex;
     flex-direction: column;
+  }
+
+  &__contact {
+    display: flex;
+    padding: 6rem 0 12rem;
   }
 }
