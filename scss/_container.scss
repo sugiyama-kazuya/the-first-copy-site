@@ -1,10 +1,14 @@
 @charset "utf-8";
 @import "valiables";
 
-.container {
+%container {
   margin: 0 auto;
   width: 76%;
   height: auto;
+}
+
+.container {
+  @extend %container;
 
   &__about {
     background-color: $base-bg-color;
@@ -21,5 +25,11 @@
       width: 100%;
       box-sizing: border-box;
     }
+  }
+
+  &__latest-topics {
+    @extend %container;
+    display: flex;
+    flex-direction: column;
   }
 }

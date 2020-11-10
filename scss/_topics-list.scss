@@ -1,0 +1,41 @@
+@charset "utf-8";
+@import "valiables";
+@import "mixins";
+
+.topics-list {
+  ul {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+
+    li {
+      width: 63%;
+      margin-bottom: 3rem;
+
+      span {
+        color: #cecece;
+        font: {
+          size: 1rem;
+          weight: bold;
+        }
+      }
+    }
+  }
+
+  &__heading {
+    border-bottom: 1px solid #dddddd;
+    font: {
+      size: 1.4rem;
+      weight: bold;
+    }
+    letter-spacing: 0.004em;
+    line-height: 6.7;
+  }
+
+  &__btn {
+    text-align: right;
+    button {
+      @include btn();
+    }
+  }
+}

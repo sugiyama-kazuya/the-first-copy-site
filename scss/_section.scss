@@ -21,6 +21,10 @@
     }
   }
 
+  &:nth-of-type(3) {
+    padding: 6rem 0;
+  }
+
   &--gray {
     background-color: $sub-bg-color;
     padding: 8rem 0 6rem;

@@ -1,4 +1,5 @@
 @import "valiables";
+@import "mixins";
 
 * {
   list-style: none;
@@ -75,12 +76,5 @@ figure {
 // ----------------------- //
 
 .global-btn {
-  background-color: #000000;
-  color: $sub-font-color;
-  font: {
-    size: 1.2rem;
-  }
-  line-height: 2;
-  letter-spacing: 0.015em;
-  padding: 1rem 4rem;
+  @include btn();
 }
