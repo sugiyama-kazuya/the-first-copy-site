@@ -6,23 +6,35 @@
   left: 0;
   width: 100%;
   height: 100vh;
+  z-index: 30;
 }
 
 .nav-menu {
   @extend %nav-menu;
   visibility: hidden;
 
-  & .active {
+  // バーガーメニューが押された時
+  &.active {
     @extend %nav-menu;
     visibility: visible;
+
+    & .nav-menu__inner {
+      opacity: 0.95;
+    }
+
+    & .nav-menu__mask {
+      opacity: 0.6;
+    }
   }
 
+  // ナビゲーションリストサイド
   &__inner {
     background-color: #222222;
     height: 100vh;
     justify-content: center;
-    opacity: 0.95;
+    opacity: 0;
     position: absolute;
+    transition: 0.2s;
     top: 0;
     right: 0;
     width: 36%;
@@ -54,10 +66,12 @@
     }
   }
 
+  // マスクサイド
   &__mask {
-    width: 100%;
-    height: 100vh;
-    opacity: 0.6;
     background-color: #222222;
+    height: 100vh;
+    opacity: 0;
+    transition: 0.2s;
+    width: 100%;
   }
 }
