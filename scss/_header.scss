@@ -1,0 +1,17 @@
+@import "valiables";
+
+.header {
+  z-index: 99;
+  position: fixed;
+  width: 100%;
+  &__inner {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 5.8rem;
+    & .header__logo {
+      color: $sub-font-color;
+      font-size: 3rem;
+    }
+  }
+}

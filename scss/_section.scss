@@ -1,0 +1,45 @@
+@charset "utf-8";
+@import "valiables";
+
+.section {
+  width: 100%;
+  height: auto;
+  position: relative;
+
+  &:first-of-type {
+    margin-top: 12rem;
+    width: 100%;
+
+    &::after {
+      content: "";
+      background-color: $sub-bg-color;
+      height: 20%;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+
+  &--gray {
+    background-color: $sub-bg-color;
+    padding: 8rem 0 6rem;
+  }
+
+  &__heading {
+    font: {
+      size: 3.2rem;
+      weight: bold;
+    }
+    margin-bottom: 3rem;
+    letter-spacing: 0.07em;
+  }
+
+  &__text {
+    font: {
+      size: 1.6rem;
+    }
+    line-height: 2;
+    margin-bottom: 3rem;
+  }
+}
