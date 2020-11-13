@@ -10,4 +10,13 @@
   line-height: 2;
   letter-spacing: 0.015em;
   padding: 1rem 4rem;
+
+  @media (max-width: 768px) {
+    @include fontsizeVw(11, $tablet-width-size);
+  }
+}
+
+@mixin fontsizeVw($size, $window-width) {
+  $winW: $window-width; //画面幅
+  font-size: ($size / $winW) * 100 + vw;
 }
