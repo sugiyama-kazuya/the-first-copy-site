@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import "valiables";
+@import "mixins";
 
 .section {
   width: 100%;
@@ -44,5 +45,41 @@
     }
     line-height: 2;
     margin-bottom: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    &:first-of-type {
+      margin-top: 8rem;
+    }
+
+    &:not(:first-of-type) {
+      padding: 0 3rem;
+    }
+
+    &__heading {
+      @include fontsizeVw(32, $tablet-width-size);
+    }
+
+    &__text {
+      @include fontsizeVw(16, $tablet-width-size);
+    }
+  }
+
+  @media (max-width: 375px) {
+    &:first-of-type {
+      margin-top: 7.8rem;
+    }
+
+    &:not(:first-of-type) {
+      padding: 0 1.5rem;
+    }
+
+    &__heading {
+      font-size: 2.8rem;
+    }
+
+    &__text {
+      font-size: 1.4rem;
+    }
   }
 }

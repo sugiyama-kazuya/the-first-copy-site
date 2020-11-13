@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import "valiables";
+@import "mixins";
 
 .works-culture {
   display: flex;
@@ -15,6 +16,26 @@
       margin-bottom: 3rem;
       object-fit: cover;
       width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    li {
+      width: 100%;
+      &:first-of-type {
+        margin-bottom: 8rem;
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    li {
+      &:first-of-type {
+        margin-bottom: 4rem;
+      }
     }
   }
 }
