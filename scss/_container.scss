@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import "valiables";
+@import "mixins";
 
 %container {
   margin: 0 auto;
@@ -40,5 +41,56 @@
   &__contact {
     display: flex;
     padding: 6rem 0 12rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 0;
+
+    &__about {
+      padding: 4rem 3rem;
+      width: 100%;
+
+      &__outer {
+        padding: 6rem 8.9rem;
+      }
+    }
+
+    &__works-culture {
+      width: 67%;
+      padding: 6rem 0 4rem;
+    }
+    &__latest-topics {
+      padding: 4rem 0;
+      width: 100%;
+    }
+
+    &__contact {
+      flex-direction: column-reverse;
+      padding: 4rem 0 8rem;
+      width: 67%;
+    }
+  }
+
+  @media (max-width: 375px) {
+    &__about {
+      padding: 5rem 1.5rem 5rem 3rem;
+      width: 100%;
+
+      &__outer {
+        padding: 5rem 1.5rem;
+      }
+    }
+
+    &__works-culture {
+      width: 100%;
+      padding: 4rem 0;
+    }
+
+    &__contact {
+      flex-direction: column-reverse;
+      padding: 4rem 0;
+      width: 100%;
+    }
   }
 }

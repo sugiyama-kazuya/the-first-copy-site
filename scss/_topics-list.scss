@@ -29,7 +29,7 @@
       weight: bold;
     }
     letter-spacing: 0.004em;
-    line-height: 6.7;
+    line-height: 4;
   }
 
   &__btn {
@@ -37,5 +37,30 @@
     button {
       @include btn();
     }
+  }
+
+  @media (max-width: 768px) {
+    ul {
+      align-items: start;
+
+      li {
+        width: 100%;
+
+        span {
+          @include fontsizeVw(10, $tablet-width-size);
+        }
+      }
+    }
+
+    &__heading {
+      @include fontsizeVw(14, $tablet-width-size);
+    }
+
+    &__btn {
+      text-align: start;
+    }
+  }
+
+  @media (max-width: 375px) {
   }
 }

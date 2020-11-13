@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import "valiables";
+@import "mixins";
 
 .contact {
   &-left {
@@ -17,6 +18,23 @@
     &__img {
       width: 100%;
       object-fit: cover;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &-left {
+      width: 100%;
+    }
+
+    &-right {
+      margin-bottom: 3rem;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 375px) {
+    &-left {
+      margin-right: 0;
     }
   }
 }

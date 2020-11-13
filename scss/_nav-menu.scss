@@ -1,4 +1,6 @@
+@charset "utf-8";
 @import "valiables";
+@import "mixins";
 
 %nav-menu {
   position: absolute;
@@ -73,5 +75,14 @@
     opacity: 0;
     transition: 0.2s;
     width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    &__inner {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 375px) {
   }
 }
